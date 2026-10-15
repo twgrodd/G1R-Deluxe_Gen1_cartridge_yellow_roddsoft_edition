@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "g1r-deluxe-yellow-roddsoft",
   "title": "G1R Deluxe - Yellow Roddsoft Edition",
-  "version": "0.2.19",
+  "version": "1.0.0",
   "author": "Roddsoft",
   "repo": "twgrodd/G1R-Deluxe_Gen1_cartridge_yellow_roddsoft_edition",
   "summary": "Deluxe Pokemon Yellow cartridge with the Roddsoft mod collection.",
@@ -11,7 +11,7 @@
   "label": "label.png",
   "base": "yellow",
   "engine": ">=0.1.38",
-  "seal": "draft",
+  "seal": "sealed",
   "mods": [
     {
       "id": "RoddSoft-Edition-Title-Screen",
