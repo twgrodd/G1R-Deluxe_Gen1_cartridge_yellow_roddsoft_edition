@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "g1r-deluxe-yellow-roddsoft",
   "title": "G1R Deluxe - Yellow Roddsoft Edition",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Roddsoft",
   "repo": "twgrodd/G1R-Deluxe_Gen1_cartridge_yellow_roddsoft_edition",
   "summary": "Deluxe Pokemon Yellow cartridge with the Roddsoft mod collection.",
@@ -158,6 +158,13 @@
         "battleBack": false,
         "shadows": false
       }
+    },
+    {
+      "id": "pikachu_true_potential",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential",
+      "version": "1.0.2",
+      "sha256": "0431241df24cbcaf09fd2498151d76cfc9b63a8f409a072945892e37e5d75f83"
     }
   ],
   "load_order": [
@@ -177,6 +184,7 @@
     "pokedex_plus",
     "hm_anywhere",
     "crystal_animated_sprites_with_shiny_visuals",
-    "DRAMATIC_SHAPE"
+    "DRAMATIC_SHAPE",
+    "pikachu_true_potential"
   ]
 }
