@@ -23,3 +23,5 @@ The root [`cart.json`](../cart.json) is authoritative for exact mod IDs, source 
 | 17 | `DRAMATIC_SHAPE` | `1.9.2` | [scottcandy34/DramaticShapeVoxelMod-latest](https://github.com/scottcandy34/DramaticShapeVoxelMod-latest) |
 
 The complete 17-mod combination still requires a successful Yellow runtime smoke test before publication.
+
+| 18 | `pikachu_true_potential` | `1.0.2` | [twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential](https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential) |
