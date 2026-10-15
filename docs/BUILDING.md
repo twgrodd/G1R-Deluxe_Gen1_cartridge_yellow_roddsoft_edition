@@ -1,14 +1,14 @@
 # Building / Testing
 
-The cartridge is currently a v0.1 scaffold.
+The cartridge is a Yellow adaptation of the Red Roddsoft cartridge; runtime compatibility has not yet been verified.
 
 ## Requirements
 
 1. Obtain and set up Gen1Recomp from its upstream project.
-2. Follow Gen1Recomp's instructions to import your own legally obtained Pokémon Red game data.
+2. Follow Gen1Recomp's instructions to import your own legally obtained Pokémon Yellow game data.
 3. Do not place ROM files or extracted proprietary assets in this repository.
-4. Add curated mods according to `docs/MODLIST.md`.
-5. Apply the cartridge load order from `cartridge/loadorder.lua`.
+4. Review the pinned mods in `cart.json` and verify each one supports Pokémon Yellow.
+5. Check the cartridge load order against `cart.json` and the installed mod versions.
 
 ## Validation target
 
