@@ -7,6 +7,14 @@
 Roddans dream-version of Pokemon Yellow.
 Basically adding Quality of life improvements from newer games to the classic without removing the essence of the game.
 
+## ⚡ NEW: Unleash Pikachu's True Potential!
+
+**Your partner Pikachu was always special. Now it can prove it.** With the new [Pikachu True Potential](https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential) mod, Oak's one-of-a-kind starter grows stronger alongside you—gradually reaching **Raichu-level base stats by level 30**, all **without evolving**. Keep the iconic Pokémon Yellow partner experience, including Pikachu following you on your adventure, while unlocking a whole new level of power.
+
+And there's more: **Double Kick at level 9**, **Amnesia at level 33**, and expanded TM/HM compatibility—including **Surf, Fly, Strength, Earthquake, and Dig**. Your loyal partner is ready to take on Kanto like never before!
+
+*Exclusive to Oak's starter Pikachu; wild and traded Pikachu remain unchanged.*
+
 ## Status
 
 **Current cartridge: v1.0.1** — 18 pinned mods, targeting Gen1Recomp `>=0.1.38`.
