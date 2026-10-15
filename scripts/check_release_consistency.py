@@ -32,7 +32,10 @@ def check(version, tag=None, bundle=None):
     if len(ids) != 17 or len(set(ids)) != len(ids) or ids != cart.get("load_order"):
         fail("17 unique mod IDs and load_order must agree")
     lua_order = (ROOT / "cartridge/loadorder.lua").read_text(encoding="utf-8")
-    lua_ids = re.findall(r'(?m)^\\s*"([^"]+)"\\s*,?\\s*
+    lua_ids = re.findall(r'(?m)^\s*"([^"]+)"\s*,?\s*$', lua_order)
+    if lua_ids != ids:
+        fail("cartridge/loadorder.lua must match cart.json load_order")
+    changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     if not re.search(r"(?m)^##\s+v" + re.escape(version) + r"(?=\s|$)", changelog):
         fail("CHANGELOG.md lacks a matching version heading")
     manifest = (ROOT / "cartridge/manifest.lua").read_text(encoding="utf-8")
