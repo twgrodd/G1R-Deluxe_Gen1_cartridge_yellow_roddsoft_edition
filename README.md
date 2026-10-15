@@ -5,7 +5,7 @@ Basically adding Quality of life improvements from newer games to the classic wi
 
 ## Status
 
-**Current cartridge: v0.2.19 (Yellow adaptation in progress)** — not yet validated for release, targeting Gen1Recomp `>=0.1.38`.
+**Current cartridge: v1.0.0 (unreleased)** — first Yellow release candidate; validation pending., targeting Gen1Recomp `>=0.1.38`.
 
 The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
