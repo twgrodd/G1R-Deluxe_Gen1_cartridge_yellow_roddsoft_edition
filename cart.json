@@ -76,7 +76,7 @@
       "options": {
         "expShare": "custom",
         "expSharePercentSlot": "all",
-        "expSharePercent": 10,
+        "expSharePercent": 20,
         "expShareSingle": "all"
       }
     },
