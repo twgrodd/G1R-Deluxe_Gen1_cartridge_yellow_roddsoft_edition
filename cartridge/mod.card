@@ -1,12 +1,12 @@
 return {
-  summary = "Curated Deluxe cartridge for Pokemon Yelloe.",
+  summary = "Curated Deluxe cartridge for Pokemon Yellow.",
   author = "twgrodd",
   tags = { "yellow", "modpack", "deluxe", "qol" },
   differences = {
     changed = {},
     added = {},
     known = {
-      "Initial scaffold; curated mod set not yet populated.",
+      "17 pinned mods are listed in cart.json; Yellow compatibility and runtime validation are pending.",
     },
   },
   credits = {},
