@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "id": "g1r-deluxe-yellow-roddsoft",
+  "title": "G1R Deluxe - Yellow Roddsoft Edition",
+  "version": "0.2.19",
+  "author": "Roddsoft",
+  "repo": "twgrodd/G1R-Deluxe_Gen1_cartridge_red_roddsoft_edition",
+  "summary": "Deluxe Pokemon Red cartridge with the Roddsoft mod collection.",
+  "shell": "#8b1624",
+  "finish": "holo",
+  "label": "label.png",
+  "base": "red",
+  "engine": ">=0.1.38",
+  "seal": "sealed",
+  "mods": [
+    {
+      "id": "RoddSoft-Edition-Title-Screen",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Gen1_mod_StartScreenRoddsoft",
+      "version": "1.1.1",
+      "sha256": "9e97bc57b5afe17469054cda83b9bdcde3b9f7b84e6b6b36f266e3bfe2cd8b68"
+    },
+    {
+      "id": "move_inspector",
+      "source": "github",
+      "repo": "notquiteog/move_inspector",
+      "version": "1.0.0",
+      "sha256": "25bee1303652c77657a756a1ce03ec32efe4a43f5e6da1a362c85f29ab9028ff"
+    },
+    {
+      "id": "running_shoes",
+      "source": "github",
+      "repo": "MadeinTaly/gen1recomp-running-shoes",
+      "version": "1.10.0",
+      "sha256": "d4a52154f9d6b9c81c2d7421b694beda79bd66ef45471d2b7064739a9f6ed37b",
+      "options": {
+        "speed": "1.5",
+        "fx": "off"
+      }
+    },
+    {
+      "id": "quality_of_life",
+      "source": "github",
+      "repo": "unxpected-uxp/pokemon-gen1-recomp-mod-qol",
+      "version": "1.3.0",
+      "sha256": "adafefb6874fd4c9de97219fa1b047e287cc0ecf70ecaaa1164d39516ac247c4",
+      "options": {
+        "qol_exp_bar": "on",
+        "qol_location_banners": 2,
+        "qol_easy_interactions": true,
+        "qol_water_interaction": "surf_first",
+        "qol_repel_prompt": true,
+        "qol_caught_indicator": "gen2"
+      }
+    },
+    {
+      "id": "move_learn_stats",
+      "source": "github",
+      "repo": "notquiteog/move_learn_stats",
+      "version": "1.0.2",
+      "sha256": "5e464dfbc543632dd3d3a2bac3d1380f66d1c4cf42994b101f64a4af61fcbf28"
+    },
+    {
+      "id": "reusable_machines",
+      "source": "github",
+      "repo": "notquiteog/reusable_machines",
+      "version": "1.0.1",
+      "sha256": "84766c594d2cfb4bb4d370873cefce2b1c5886d6f1d4268158bcc49412fe9776"
+    },
+    {
+      "id": "exp_share",
+      "source": "github",
+      "repo": "Nexhas28/exp_share",
+      "version": "0.1.10",
+      "sha256": "7a22e8d143b27b857773db350d969f3f5b31f0e2c813cd82d4181ef2c3d85f86",
+      "options": {
+        "expShare": "custom",
+        "expSharePercentSlot": "all",
+        "expSharePercent": 10,
+        "expShareSingle": "all"
+      }
+    },
+    {
+      "id": "new-game-plus-roddsoft",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Gen1_mod_fork_new-game-plus-Roddsoftver",
+      "version": "1.0.16",
+      "sha256": "967e3c812c4a88c7de7111b7315bb8d6f6a7d61d22893fae6c4212ab35c939d8"
+    },
+    {
+      "id": "all_pokemon_catchable_roddsoft",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Gen1_mod_fork_All_Pokemon_Catchable",
+      "version": "0.4.5",
+      "sha256": "c520ff1dae37236b80a0da820c9571a2d426410fcb7aa05d3eaf943cc7aa985c"
+    },
+    {
+      "id": "trainer-rematch-roddsoft",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Gen1_mod_fork_trainer-Rematch-Roddsoftver",
+      "version": "0.5.25",
+      "sha256": "354c01a472e039fa59b10a4597055678f1c373634c61d202e4de3dd0d3790063"
+    },
+    {
+      "id": "moves_manager",
+      "source": "github",
+      "repo": "notquiteog/moves_manager",
+      "version": "1.0.1",
+      "sha256": "918cd1f4974818583e1c8117b38cf1504fe187b5da5ccc4abb58c6ef9c7cf764"
+    },
+    {
+      "id": "modern_bag_roddsoft",
+      "source": "github",
+      "repo": "twgrodd/G1R-Deluxe_Gen1_mod_fork_Modern-Bag-Roddsoftver",
+      "version": "1.6.13",
+      "sha256": "22ab8853ee5535c494d511851d59f9f6e10f1a0279d4ed4c0105168f630bbb89",
+      "options": {
+        "opening_pocket": "last"
+      }
+    },
+    {
+      "id": "modern_pc_ui",
+      "source": "github",
+      "repo": "piftee/gen1recomp-modern-pc-ui",
+      "version": "0.6.3",
+      "sha256": "0aef30a507e46684c62d83bcfebd9df8c334d7558cda925c2a93e64326fe7f89"
+    },
+    {
+      "id": "pokedex_plus",
+      "source": "github",
+      "repo": "notquiteog/pokedex_plus",
+      "version": "1.3.4",
+      "sha256": "00a040bad3da328309f61439c08b0abdc5c81b79d8090f9ca09b4d9a8c32115c"
+    },
+    {
+      "id": "hm_anywhere",
+      "source": "github",
+      "repo": "notquiteog/hm_anywhere",
+      "version": "1.2.0",
+      "sha256": "ecc76b2d5ec73cfa7d39b32f536e62ac5b824ee1a85d91beafd74c97058c1d4e"
+    },
+    {
+      "id": "crystal_animated_sprites_with_shiny_visuals",
+      "source": "github",
+      "repo": "distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals",
+      "version": "2.0.3",
+      "sha256": "3d2874917f03a42cbf96d0d7e1b5c19bde09a5405fe12559ac241af017155689"
+    },
+    {
+      "id": "DRAMATIC_SHAPE",
+      "source": "github",
+      "repo": "scottcandy34/DramaticShapeVoxelMod-latest",
+      "version": "1.9.2",
+      "sha256": "aeec48db27778dc30edc9df5b77585f0651469f53c772e3cac9906d4dc5c98e9",
+      "options": {
+        "shinyOdds": 128,
+        "water": "off",
+        "battleBack": false,
+        "shadows": false
+      }
+    }
+  ],
+  "load_order": [
+    "RoddSoft-Edition-Title-Screen",
+    "move_inspector",
+    "running_shoes",
+    "quality_of_life",
+    "move_learn_stats",
+    "reusable_machines",
+    "exp_share",
+    "new-game-plus-roddsoft",
+    "all_pokemon_catchable_roddsoft",
+    "trainer-rematch-roddsoft",
+    "moves_manager",
+    "modern_bag_roddsoft",
+    "modern_pc_ui",
+    "pokedex_plus",
+    "hm_anywhere",
+    "crystal_animated_sprites_with_shiny_visuals",
+    "DRAMATIC_SHAPE"
+  ]
+}
