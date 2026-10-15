@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   release:
-    if: ${{ github.event.head_commit.message == '[release v1.0.0]' }}
+    if: ${{ github.event.head_commit.message == '[release v1.0.1]' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
       - name: Verify release request and all version references
         env:
-          TAG: v1.0.0
+          TAG: v1.0.1
         run: |
           set -euo pipefail
           test "$GITHUB_REF" = "refs/heads/main"
@@ -46,7 +46,7 @@ jobs:
           python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
       - name: Build and inspect packed cartridge
         env:
-          TAG: v1.0.0
+          TAG: v1.0.1
         run: |
           set -euo pipefail
           version="${TAG#v}"
@@ -58,7 +58,7 @@ jobs:
       - name: Publish only after all checks pass
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: v1.0.0
+          TAG: v1.0.1
         run: |
           set -euo pipefail
           version="${TAG#v}"
