@@ -1,8 +1,7 @@
-name: Release Yellow cartridge (authorized request branch)
+name: Release Yellow cartridge (explicit release commit)
 on:
   push:
-    branches:
-      - 'release-request/v*'
+    branches: [main]
 permissions:
   contents: write
 concurrency:
@@ -10,19 +9,18 @@ concurrency:
   cancel-in-progress: false
 jobs:
   release:
+    if: ${{ github.event.head_commit.message == '[release v1.0.0]' }}
     runs-on: ubuntu-latest
-    environment: cartridge-release
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Verify release request and all version references
         env:
-          TAG: ${{ github.ref_name }}
+          TAG: v1.0.0
         run: |
           set -euo pipefail
-          [[ "$GITHUB_REF" =~ ^refs/heads/release-request/v[0-9]+\.[0-9]+\.[0-9]+$ ]]
-          TAG="${TAG#release-request/}"
+          test "$GITHUB_REF" = "refs/heads/main"
           python3 scripts/check_release_consistency.py --tag "$TAG"
           if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
             echo "::error::Tag already exists; releases are immutable"
@@ -48,10 +46,9 @@ jobs:
           python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
       - name: Build and inspect packed cartridge
         env:
-          TAG: ${{ github.ref_name }}
+          TAG: v1.0.0
         run: |
           set -euo pipefail
-          TAG="${TAG#release-request/}"
           version="${TAG#v}"
           mkdir -p dist
           asset="dist/g1r-deluxe-yellow-roddsoft-${version}.g1rcart"
@@ -61,9 +58,8 @@ jobs:
       - name: Publish only after all checks pass
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
+          TAG: v1.0.0
         run: |
           set -euo pipefail
-          TAG="${TAG#release-request/}"
           version="${TAG#v}"
           gh release create "$TAG" "dist/g1r-deluxe-yellow-roddsoft-${version}.g1rcart" dist/sha256sums.txt --target "$GITHUB_SHA" --title "$TAG" --notes "G1R Deluxe Yellow Roddsoft Edition $TAG. Validated pinned mods and consistent release manifests."
