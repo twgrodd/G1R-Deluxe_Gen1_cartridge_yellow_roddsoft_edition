@@ -5,7 +5,7 @@ Basically adding Quality of life improvements from newer games to the classic wi
 
 ## Status
 
-**Current cartridge: v1.0.0 (unreleased)** — first Yellow release candidate; validation pending., targeting Gen1Recomp `>=0.1.38`.
+**Current cartridge: v1.0.1** — 18 pinned mods, targeting Gen1Recomp `>=0.1.38`.
 
 The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
@@ -28,6 +28,7 @@ The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsof
 15. HM Anywhere 1.2.0
 16. Crystal Animated Sprites with Shiny Visuals 2.0.3
 17. Dramatic Shape 1.9.2
+18. Pikachu True Potential 1.0.2
 
 ## Curated defaults
 
