@@ -1,22 +1,21 @@
--- Proposed v0.1 cartridge order, derived from the priorities declared
--- by the supplied mod manifests. Equal-priority entries are kept explicit
--- so the cartridge can make their relative order deterministic.
---
--- quality_of_life is intentionally disabled pending redistribution/license
--- review and combined testing with hm_anywhere contextual interactions.
-
+-- Keep this order synchronized with cart.json -> load_order.
+-- All 17 pinned cartridge mods are included. Compatibility is validated separately.
 return {
-  "startscreen_roddsoft",
+  "RoddSoft-Edition-Title-Screen",
   "move_inspector",
   "running_shoes",
-  -- "quality_of_life",
+  "quality_of_life",
   "move_learn_stats",
   "reusable_machines",
-  "exp_share_modes",
-  "new_game_plus",
-  "trade_evolution_fix",
+  "exp_share",
+  "new-game-plus-roddsoft",
+  "all_pokemon_catchable_roddsoft",
+  "trainer-rematch-roddsoft",
   "moves_manager",
-  "modern_bag",
+  "modern_bag_roddsoft",
+  "modern_pc_ui",
   "pokedex_plus",
   "hm_anywhere",
+  "crystal_animated_sprites_with_shiny_visuals",
+  "DRAMATIC_SHAPE",
 }
