@@ -1,0 +1,74 @@
+name: Release Yellow cartridge (manual approval only)
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_release:
+        description: 'Type RELEASE to authorize publication'
+        required: true
+        type: string
+      tag:
+        description: 'Exact version tag (e.g. v0.2.19)'
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: yellow-cartridge-release
+  cancel-in-progress: false
+jobs:
+  release:
+    if: ${{ inputs.confirm_release == 'RELEASE' }}
+    runs-on: ubuntu-latest
+    environment: cartridge-release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify release request and all version references
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/main"
+          python3 scripts/check_release_consistency.py --tag "$TAG"
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            echo "::error::Tag already exists; releases are immutable"
+            exit 1
+          fi
+      - name: Normalize label for launcher
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 - <<'PY'
+          from PIL import Image
+          import os
+          p = "label.png"
+          with Image.open(p) as im:
+              im.convert("RGB").resize((512, 512), Image.Resampling.LANCZOS).save(p, "PNG", optimize=True)
+          assert os.path.getsize(p) < 256 * 1024
+          PY
+      - name: Fetch cartkit and verify pins
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          curl -fsSL --retry 3 -o "$RUNNER_TEMP/cartkit.py" https://raw.githubusercontent.com/bryanthaboi/gen1recomp/dev/tools/cartkit.py
+          python3 "$RUNNER_TEMP/cartkit.py" selftest --quiet
+          python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
+      - name: Build and inspect packed cartridge
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          version="${TAG#v}"
+          mkdir -p dist
+          asset="dist/g1r-deluxe-yellow-roddsoft-${version}.g1rcart"
+          python3 "$RUNNER_TEMP/cartkit.py" pack . -o "$asset" --online
+          python3 scripts/check_release_consistency.py --tag "$TAG" --bundle "$asset"
+          (cd dist && sha256sum *.g1rcart > sha256sums.txt)
+      - name: Publish only after all checks pass
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          version="${TAG#v}"
+          gh release create "$TAG" "dist/g1r-deluxe-yellow-roddsoft-${version}.g1rcart" dist/sha256sums.txt --target "$GITHUB_SHA" --title "$TAG" --notes "G1R Deluxe Yellow Roddsoft Edition $TAG. Validated pinned mods and consistent release manifests."
