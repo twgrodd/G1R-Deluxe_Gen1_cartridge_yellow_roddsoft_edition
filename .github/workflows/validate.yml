@@ -1,0 +1,46 @@
+name: Validate Yellow cartridge
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check files and prevent ROM/save distribution
+        run: |
+          set -euo pipefail
+          test -f cart.json && test -f label.png && test -f CHANGELOG.md
+          if find . -type f \( -iname '*.gb' -o -iname '*.gbc' -o -iname '*.rom' -o -iname '*.sav' -o -iname '*.srm' \) -print -quit | grep -q .; then exit 1; fi
+      - name: Verify matching versions
+        run: python3 scripts/check_release_consistency.py
+      - name: Prepare label
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 - <<'PY'
+          from PIL import Image
+          p = "label.png"
+          with Image.open(p) as im:
+              im.convert("RGB").resize((512, 512), Image.Resampling.LANCZOS).save(p, "PNG", optimize=True)
+          assert __import__("os").path.getsize(p) < 256 * 1024
+          PY
+      - name: Download and test cartkit
+        run: |
+          curl -fsSL --retry 3 -o "$RUNNER_TEMP/cartkit.py" https://raw.githubusercontent.com/bryanthaboi/gen1recomp/dev/tools/cartkit.py
+          python3 "$RUNNER_TEMP/cartkit.py" selftest --quiet
+      - name: Strictly validate pins and pack test artifact
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
+          mkdir -p dist
+          python3 "$RUNNER_TEMP/cartkit.py" pack . -o dist/validation.g1rcart --online
+          python3 scripts/check_release_consistency.py --bundle dist/validation.g1rcart
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yellow-validation-only
+          path: dist/validation.g1rcart
+          retention-days: 7
