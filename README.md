@@ -1,5 +1,9 @@
 # G1R Deluxe — Gen 1 Cartridge: Yellow / Roddsoft Edition
 
+<p align="center">
+  <img src="label.png" alt="G1R Deluxe Pokémon Yellow — Roddsoft Edition cartridge label" width="420">
+</p>
+
 Roddans dream-version of Pokemon Yellow.
 Basically adding Quality of life improvements from newer games to the classic without removing the essence of the game.
 
