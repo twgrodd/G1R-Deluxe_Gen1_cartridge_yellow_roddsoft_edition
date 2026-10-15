@@ -1,5 +1,13 @@
 # Changelog
 
+## Yellow adaptation — v0.2.19 (unreleased)
+
+- Forked the Red Roddsoft cartridge configuration for Pokémon Yellow.
+- Preserved the curated 17-mod list and synchronized Lua/JSON load orders.
+- Added validation and manual-only release workflows with strict version checks.
+- This is an unreleased Yellow development version; prior Red history below is retained for provenance, not as Yellow release history.
+
+
 This file records the evolution of **G1R Deluxe - Red / Roddsoft Edition** from the first cartridge release onward. It includes published releases as well as notable attempted versions that were not published.
 
 ## Starting point — v0.1.0 (2026-10-02)
