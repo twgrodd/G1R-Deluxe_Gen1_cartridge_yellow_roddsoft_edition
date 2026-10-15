@@ -1,13 +1,13 @@
-# G1R Deluxe — Gen 1 Cartridge: Red / Roddsoft Edition
+# G1R Deluxe — Gen 1 Cartridge: Yellow / Roddsoft Edition
 
-Roddans dream-version of Pokemon Red.
+Roddans dream-version of Pokemon Yellow.
 Basically adding Quality of life improvements from newer games to the classic without removing the essence of the game.
 
 ## Status
 
-**Current cartridge: v0.2.19** — sealed and release-ready, targeting Gen1Recomp `>=0.1.38`.
+**Current cartridge: v0.2.19 (Yellow adaptation in progress)** — not yet validated for release, targeting Gen1Recomp `>=0.1.38`.
 
-The cartridge uses a dark-red `#8b1624` shell, holo finish, and the custom Roddsoft label.
+The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
 ## Current mod lineup
 
@@ -43,7 +43,7 @@ The intended display setup is **Voxel 0** and **TiltShift off**. These are Gen1R
 
 ## Goals
 
-- Target Pokémon Red explicitly.
+- Target Pokémon Yellow explicitly.
 - Combine compatible quality-of-life, graphics, gameplay, and content mods.
 - Keep upstream mods attributable and versioned.
 - Keep Roddsoft-specific compatibility changes isolated.
@@ -51,7 +51,7 @@ The intended display setup is **Voxel 0** and **TiltShift off**. These are Gen1R
 
 ## Cartridge format
 
-This project is an official-style Gen1Recomp custom cartridge. The release artifact is a `.g1rcart` built from the root `cart.json` manifest. Published releases use strict validation and pinned GitHub mod releases.
+This project is an official-style Gen1Recomp custom cartridge. The release artifact is a `.g1rcart` built from the root `cart.json` manifest. Release only after validating all pinned mods against Pokémon Yellow; Red compatibility does not establish Yellow compatibility.
 
 See [CHANGELOG.md](CHANGELOG.md) for the complete version history.
 
@@ -64,4 +64,4 @@ This repository is an independent fan project and is not affiliated with Nintend
 
 ## Legal / content policy
 
-Do not commit Pokémon Red ROM files, extracted proprietary assets, or ROM-derived bytes. Users must provide any required legally obtained game data themselves.
+Do not commit Pokémon Yellow ROM files, extracted proprietary assets, or ROM-derived bytes. Users must provide any required legally obtained game data themselves.
