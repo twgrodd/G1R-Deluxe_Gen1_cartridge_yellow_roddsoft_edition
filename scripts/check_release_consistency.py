@@ -29,8 +29,8 @@ def check(version, tag=None, bundle=None):
     if (ROOT / "config/red-deluxe.lua").exists():
         fail("obsolete Red configuration must not be present")
     ids = [entry["id"] for entry in cart.get("mods", [])]
-    if len(ids) != 17 or len(set(ids)) != len(ids) or ids != cart.get("load_order"):
-        fail("17 unique mod IDs and load_order must agree")
+    if len(ids) != 18 or len(set(ids)) != len(ids) or ids != cart.get("load_order"):
+        fail("18 unique mod IDs and load_order must agree")
     lua_order = (ROOT / "cartridge/loadorder.lua").read_text(encoding="utf-8")
     lua_ids = re.findall(r'(?m)^\s*"([^"]+)"\s*,?\s*$', lua_order)
     if lua_ids != ids:
