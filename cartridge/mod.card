@@ -6,7 +6,7 @@ return {
     changed = {},
     added = {},
     known = {
-      "17 pinned mods are listed in cart.json; Yellow compatibility and runtime validation are pending.",
+      "18 pinned mods are listed in cart.json; in-game compatibility testing remains recommended.",
     },
   },
   credits = {},
