@@ -1,5 +1,5 @@
 -- Keep this order synchronized with cart.json -> load_order.
--- All 17 pinned cartridge mods are included. Compatibility is validated separately.
+-- All 18 pinned cartridge mods are included. Compatibility is validated separately.
 return {
   "RoddSoft-Edition-Title-Screen",
   "move_inspector",
@@ -18,4 +18,5 @@ return {
   "hm_anywhere",
   "crystal_animated_sprites_with_shiny_visuals",
   "DRAMATIC_SHAPE",
+  "pikachu_true_potential",
 }
