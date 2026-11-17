@@ -22,6 +22,6 @@ The root [`cart.json`](../cart.json) is authoritative for exact mod IDs, source 
 | 16 | `crystal_animated_sprites_with_shiny_visuals` | `2.0.3` | [distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals](https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals) |
 | 17 | `DRAMATIC_SHAPE` | `1.9.2` | [scottcandy34/DramaticShapeVoxelMod-latest](https://github.com/scottcandy34/DramaticShapeVoxelMod-latest) |
 
-The 18-mod collection is pinned and strict-online validated for packaging. That validation confirms published builds and manifest compatibility metadata; it does not replace a full in-game Yellow runtime smoke test.
+The three refreshed mods have published releases and declared Gen 1 / Yellow support. Strict online validation currently fails because six existing `notquiteog` source repositories do not resolve to published release tags (see `docs/COMPATIBILITY.md`). Do not publish v1.0.2 until those six sources are restored or replaced. A full in-game Yellow runtime smoke test is also still recommended.
 
 | 18 | `pikachu_true_potential` | `1.0.3` | [twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential](https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential) |
