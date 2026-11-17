@@ -1,13 +1,13 @@
 # Building / Testing
 
-The cartridge is a Yellow adaptation of the Red Roddsoft cartridge; runtime compatibility has not yet been verified.
+The cartridge is a Yellow adaptation of the Red Roddsoft cartridge; release packaging is automatically checked; a full in-game integration smoke test is still recommended.
 
 ## Requirements
 
 1. Obtain and set up Gen1Recomp from its upstream project.
 2. Follow Gen1Recomp's instructions to import your own legally obtained Pokémon Yellow game data.
 3. Do not place ROM files or extracted proprietary assets in this repository.
-4. Review the pinned mods in `cart.json` and verify each one supports Pokémon Yellow.
+4. Review the pinned mods in `cart.json`; use their manifests and project documentation to confirm declared Yellow / Gen 1 support.
 5. Check the cartridge load order against `cart.json` and the installed mod versions.
 
 ## Validation target
