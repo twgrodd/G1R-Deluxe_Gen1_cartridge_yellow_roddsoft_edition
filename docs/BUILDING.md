@@ -1,6 +1,6 @@
 # Building / Testing
 
-The cartridge is a Yellow adaptation of the Red Roddsoft cartridge; release packaging is automatically checked; a full in-game integration smoke test is still recommended.
+The cartridge is a Yellow adaptation of the Red Roddsoft cartridge. The current v1.0.2 candidate is not release-ready: strict online validation cannot resolve six upstream `notquiteog` release sources listed in `docs/COMPATIBILITY.md`. A full in-game integration smoke test is also recommended.
 
 ## Requirements
 
