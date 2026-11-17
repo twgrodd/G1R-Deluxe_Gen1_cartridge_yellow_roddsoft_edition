@@ -12,7 +12,7 @@
 
 The three refreshed upstream manifests declare Gen 1 support (Running Shoes and Exp Share) or Pokémon Yellow support (Pikachu True Potential). The Pikachu True Potential project also documents player-tested use alongside Running Shoes and Exp Share. The remaining cartridge pins are unchanged from v1.0.1.
 
-The release validation workflow runs cartkit self-tests, strict online validation of every pinned release asset, packaging, and cross-file version/load-order checks. These checks validate package integrity and declared compatibility metadata; they do **not** constitute a full in-game runtime smoke test of all 18 mods together.
+The release validation workflow runs cartkit self-tests, strict online validation of every pinned release asset, packaging, and cross-file version/load-order checks. On the current v1.0.2 candidate, strict online validation **fails** because these six existing sources no longer resolve to published releases: `notquiteog/move_inspector` (1.0.0), `notquiteog/move_learn_stats` (1.0.2), `notquiteog/reusable_machines` (1.0.1), `notquiteog/moves_manager` (1.0.1), `notquiteog/pokedex_plus` (1.3.4), and `notquiteog/hm_anywhere` (1.2.0). Their current manifests/releases could not be retrieved from those repositories. The other three refreshed mods resolve to published assets and declare Gen 1 / Yellow support. Resolve or replace the six unavailable sources before attempting publication. Even after package validation passes, that does **not** constitute a full in-game runtime smoke test of all 18 mods together.
 
 ## Recommended runtime smoke tests
 
