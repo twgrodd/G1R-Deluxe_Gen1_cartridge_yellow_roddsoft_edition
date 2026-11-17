@@ -11,13 +11,13 @@ Basically adding Quality of life improvements from newer games to the classic wi
 
 **Your partner Pikachu was always special. Now it can prove it.** With the new [Pikachu True Potential](https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential) mod, Oak's one-of-a-kind starter grows stronger alongside you—gradually reaching **Raichu-level base stats by level 30**, all **without evolving**. Keep the iconic Pokémon Yellow partner experience, including Pikachu following you on your adventure, while unlocking a whole new level of power.
 
-And there's more: **Double Kick at level 9**, **Amnesia at level 33**, and expanded TM/HM compatibility—including **Surf, Fly, Strength, Earthquake, and Dig**. Your loyal partner is ready to take on Kanto like never before!
+And there's more: **Double Kick at level 9**, **Amnesia at level 31**, and expanded TM/HM compatibility—including **Surf, Fly, Strength, Earthquake, and Dig**. Your loyal partner is ready to take on Kanto like never before!
 
 *Exclusive to Oak's starter Pikachu; wild and traded Pikachu remain unchanged.*
 
 ## Status
 
-**Current cartridge: v1.0.1** — 18 pinned mods, targeting Gen1Recomp `>=0.1.38`.
+**Current cartridge: v1.0.2** — 18 pinned mods, targeting Gen1Recomp `>=0.1.38`.
 
 The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
@@ -25,11 +25,11 @@ The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsof
 
 1. RoddSoft Edition Title Screen 1.1.1
 2. Move Inspector 1.0.0
-3. Running Shoes 1.10.0
+3. Running Shoes 1.11.1
 4. Quality of Life 1.3.0
 5. Move Learn Stats 1.0.2
 6. Reusable Machines 1.0.1
-7. Exp Share 0.1.10
+7. Exp Share 0.1.11
 8. New Game Plus Roddsoft 1.0.16
 9. All Pokémon Catchable Roddsoft 0.4.5
 10. Trainer Rematch RoddSoft 0.5.25
@@ -40,7 +40,7 @@ The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsof
 15. HM Anywhere 1.2.0
 16. Crystal Animated Sprites with Shiny Visuals 2.0.3
 17. Dramatic Shape 1.9.2
-18. Pikachu True Potential 1.0.2
+18. Pikachu True Potential 1.0.3
 
 ## Curated defaults
 
