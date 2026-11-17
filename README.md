@@ -17,7 +17,7 @@ And there's more: **Double Kick at level 9**, **Amnesia at level 31**, and expan
 
 ## Status
 
-**Current cartridge: v1.0.2** — 18 pinned mods, targeting Gen1Recomp `>=0.1.38`.
+**Prepared cartridge: v1.0.2 (not yet released)** — 18 mods; release is blocked by six unresolved upstream source repositories, targeting Gen1Recomp `>=0.1.38`.
 
 The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
