@@ -7,6 +7,7 @@
 - Updated Pikachu True Potential from 1.0.2 to 1.0.3 (Pokémon Yellow).
 - Refreshed Running Shoes, Exp Share, and Pikachu True Potential pins and synchronized cartridge metadata.
 - Corrected six FAFF0x mod source pins to the indexed versioned ZIP archives and verified their SHA-256 hashes.
+- CI verified all six ZIPs, online-checked the other 12 pinned releases, and built a strict 18-mod `.g1rcart` bundle.
 - Retained all other pinned mods and the existing 18-mod load order.
 
 ## v1.0.1
