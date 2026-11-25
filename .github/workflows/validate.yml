@@ -31,13 +31,16 @@ jobs:
         run: |
           curl -fsSL --retry 3 -o "$RUNNER_TEMP/cartkit.py" https://raw.githubusercontent.com/bryanthaboi/gen1recomp/dev/tools/cartkit.py
           python3 "$RUNNER_TEMP/cartkit.py" selftest --quiet
-      - name: Strictly validate pins and pack test artifact
+      - name: Verify indexed direct ZIP pins and other releases
         env:
           GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/verify_direct_mod_pins.py . "$RUNNER_TEMP/cartkit.py"
+      - name: Strictly validate full manifest and pack test artifact
         run: |
-          python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
+          set -euo pipefail
+          python3 "$RUNNER_TEMP/cartkit.py" validate . --strict
           mkdir -p dist
-          python3 "$RUNNER_TEMP/cartkit.py" pack . -o dist/validation.g1rcart --online
+          python3 "$RUNNER_TEMP/cartkit.py" pack . -o dist/validation.g1rcart
           python3 scripts/check_release_consistency.py --bundle dist/validation.g1rcart
       - uses: actions/upload-artifact@v4
         with:
