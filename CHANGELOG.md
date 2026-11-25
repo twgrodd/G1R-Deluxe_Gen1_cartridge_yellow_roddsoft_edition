@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.2
+## v1.0.2 - 2026-11-25
 
 - Updated Running Shoes from 1.10.0 to 1.11.1 (Gen 1 support retained).
 - Updated Exp Share from 0.1.10 to 0.1.11 (Gen 1 support retained); preserved the curated CUSTOM 20% setting.
