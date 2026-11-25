@@ -37,13 +37,15 @@ jobs:
               im.convert("RGB").resize((512, 512), Image.Resampling.LANCZOS).save(p, "PNG", optimize=True)
           assert os.path.getsize(p) < 256 * 1024
           PY
-      - name: Fetch cartkit and verify pins
+      - name: Fetch cartkit and verify all mod pins
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
           curl -fsSL --retry 3 -o "$RUNNER_TEMP/cartkit.py" https://raw.githubusercontent.com/bryanthaboi/gen1recomp/dev/tools/cartkit.py
           python3 "$RUNNER_TEMP/cartkit.py" selftest --quiet
-          python3 "$RUNNER_TEMP/cartkit.py" validate . --online --strict
+          python3 scripts/verify_direct_mod_pins.py . "$RUNNER_TEMP/cartkit.py"
+          python3 "$RUNNER_TEMP/cartkit.py" validate . --strict
       - name: Build and inspect packed cartridge
         env:
           TAG: v1.0.2
@@ -52,7 +54,7 @@ jobs:
           version="${TAG#v}"
           mkdir -p dist
           asset="dist/g1r-deluxe-yellow-roddsoft-${version}.g1rcart"
-          python3 "$RUNNER_TEMP/cartkit.py" pack . -o "$asset" --online
+          python3 "$RUNNER_TEMP/cartkit.py" pack . -o "$asset"
           python3 scripts/check_release_consistency.py --tag "$TAG" --bundle "$asset"
           (cd dist && sha256sum *.g1rcart > sha256sums.txt)
       - name: Publish only after all checks pass
