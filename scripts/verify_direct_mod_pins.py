@@ -19,17 +19,17 @@ from pathlib import Path
 
 DIRECT = {
     "move_inspector": ("1.0.0", "move_inspector_v1.0.0.zip",
-        "582d5e0eb9a095b17a6a12f1f02fb8e91a392903b6f8e37f775a4d69759e3e39"),
+        "25bee1303652c77657a756a1ce03ec32efe4a43f5e6da1a362c85f29ab9028ff"),
     "move_learn_stats": ("1.0.2", "move_learn_stats_v1.0.2.zip",
-        "ca11def1869d2bfce63360743e32ed6e538256a29e7cfcc144afc4c138417e3f"),
+        "5e464dfbc543632dd3d3a2bac3d1380f66d1c4cf42994b101f64a4af61fcbf28"),
     "reusable_machines": ("1.0.1", "reusable_machines_v1.0.1.zip",
-        "0d49953dac24adbed6d9774dc12f57941cc61899a3c6e4394d55a54ed3ab86f7"),
+        "84766c594d2cfb4bb4d370873cefce2b1c5886d6f1d4268158bcc49412fe9776"),
     "moves_manager": ("1.0.1", "moves_manager_v1.0.1.zip",
-        "98801ee1329bdd08a110a8184de17a0558b3d677316e7c81a26c4b28d86e53cc"),
+        "918cd1f4974818583e1c8117b38cf1504fe187b5da5ccc4abb58c6ef9c7cf764"),
     "pokedex_plus": ("1.3.4", "pokedex_plus_v1.3.4.zip",
-        "c9f17b525dd48db01c2f1c8c798c44e7241ce6844cfa29d0d30eaeb11aa2133d"),
+        "00a040bad3da328309f61439c08b0abdc5c81b79d8090f9ca09b4d9a8c32115c"),
     "hm_anywhere": ("1.2.0", "hm_anywhere_v1.2.0.zip",
-        "5a7022f488746ce7135b5df8dbb846780e38b2fc58de4262eee1ce4a9e39aeae"),
+        "ecc76b2d5ec73cfa7d39b32f536e62ac5b824ee1a85d91beafd74c97058c1d4e"),
 }
 INDEX_REPO = "FAFF0x/gen1recomp"
 UA = "G1R-Deluxe-cartridge-pin-check/1.0"
