@@ -5,7 +5,7 @@
 - Target game: **Pokémon Yellow**
 - Platform: **Gen1Recomp / Mod API 2**
 - Cartridge: **G1R Deluxe — Yellow Roddsoft Edition**
-- Current candidate: **v1.0.2 (not yet released)**
+- Current release: **v1.0.2**
 - Authoritative mod inventory and exact pinned versions: [`../cart.json`](../cart.json)
 
 ## Compatibility evidence
