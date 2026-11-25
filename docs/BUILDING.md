@@ -1,6 +1,6 @@
 # Building / Testing
 
-The cartridge is a Yellow adaptation of the Red Roddsoft cartridge. The current v1.0.2 candidate is not release-ready: strict online validation cannot resolve six upstream `notquiteog` release sources listed in `docs/COMPATIBILITY.md`. A full in-game integration smoke test is also recommended.
+The cartridge is a Yellow adaptation of the Red Roddsoft cartridge. The v1.0.2 candidate retains all 18 mods. Six FAFF0x mods are supplied as direct versioned ZIPs, so `scripts/verify_direct_mod_pins.py` checks their pinned archive hashes and ZIP integrity while upstream cartkit validates the other release pins online. Full in-game integration testing is still required before claiming runtime compatibility.
 
 ## Requirements
 
