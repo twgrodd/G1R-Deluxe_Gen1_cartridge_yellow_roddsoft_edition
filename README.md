@@ -17,7 +17,7 @@ And there's more: **Double Kick at level 9**, **Amnesia at level 31**, and expan
 
 ## Status
 
-**Prepared cartridge: v1.0.2 (not yet released)** — all 18 mods are retained. Six FAFF0x mods are pinned to the exact versioned ZIPs in its mod index with SHA-256 verification. The candidate targets Gen1Recomp `>=0.1.38`; CI validation and an in-game integration smoke test remain before release.
+**Prepared cartridge: v1.0.2** — all 18 mods are retained. Six FAFF0x mods are pinned to the exact versioned ZIPs in its mod index with SHA-256 verification. CI validation and packaging pass; full in-game integration testing has not been performed. The cartridge targets Gen1Recomp `>=0.1.38`.
 
 The cartridge uses a yellow `#e6c21b` shell, holo finish, and the custom Roddsoft label.
 
